@@ -1,7 +1,7 @@
-var Details = require('../models/details.js');
+var Module = require('../models/details.js');
 
 exports.all = function(req, res){
-	Details.all(
+	Module.all(
 		function(err, docs){
 			if(err){
 				console.log(err)
@@ -12,7 +12,7 @@ exports.all = function(req, res){
 };
 
 exports.findById = function (req, res) {
-	Details.findById(
+	Module.findById(
 		req.params.id, 
 		function(err, doc){
 			if(err){
@@ -24,7 +24,7 @@ exports.findById = function (req, res) {
 };
 
 exports.create = function(req, res){
-	Details.create(
+	Module.create(
 		req.body, 
 		function(err, result){
 			if(err){
@@ -37,7 +37,7 @@ exports.create = function(req, res){
 };
 
 exports.update = function(req, res){
-	Details.update(
+	Module.update(
 		req.params.id, 
 		req.body, 
 		function (err, result){
@@ -50,7 +50,7 @@ exports.update = function(req, res){
 };
 
 exports.delete = function(req, res){
-	Details.delete(
+	Module.delete(
 		req.params.id,
 		function(err, result){
 			if (err) {
