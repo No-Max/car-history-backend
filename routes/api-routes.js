@@ -1,6 +1,7 @@
 const worksController = require('./../controllers/works.js');
 const detailsController = require('./../controllers/details.js');
 const categoriesController = require('./../controllers/categories.js');
+const contractorsController = require('./../controllers/contractors.js');
 
 exports.init = function(app) {
     // works
@@ -23,4 +24,11 @@ exports.init = function(app) {
     app.post('/categories', categoriesController.create);
     app.put('/categories/:id', categoriesController.update);
     app.delete('/categories/:id', categoriesController.delete);
+
+    // contractors
+    app.get('/contractors', contractorsController.all);
+    app.get('/contractors/:id', contractorsController.findById);
+    app.post('/contractors', contractorsController.create);
+    app.put('/contractors/:id', contractorsController.update);
+    app.delete('/contractors/:id', contractorsController.delete);
 };
