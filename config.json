@@ -1,0 +1,5 @@
+{
+    "db": {
+        "connectionString": "mongodb://carhistoryuser:01021994ab@ds331198.mlab.com:31198/car_history"
+    }
+}
